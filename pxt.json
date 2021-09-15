@@ -1,5 +1,5 @@
 {
-    "name": "calliope-megalovania-master",
+    "name": "calliope-megalovania",
     "description": "",
     "dependencies": {
         "core": "*",
@@ -16,5 +16,5 @@
     "supportedTargets": [
         "calliopemini"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }
