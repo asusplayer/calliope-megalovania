@@ -1,10 +1,10 @@
 input.onButtonPressed(Button.A, function () {
     for (let index = 0; index <= beat.length; index++) {
-        music.playTone(frequencys[notes1[index]], getBeat(index))
-        basic.pause(20)
         if (index == 40) {
             radio.sendNumber(187)
         }
+        music.playTone(frequencys[notes1[index]], getBeat(index))
+        basic.pause(20)
     }
 })
 function getBeat (index: number) {
@@ -17,6 +17,16 @@ function getBeat (index: number) {
     }
     return 0
 }
+radio.onReceivedNumber(function (receivedNumber) {
+	for (let index = 0; index <= beat.length; index++) {
+        music.playTone(frequencys[notes1[index]], getBeat(index))
+        basic.pause(20)
+        if (index == 40) {
+            radio.sendNumber(187)
+        }
+    }
+})
+
 let frequencys: number[] = []
 let beat: number[] = []
 let notes1: number[] = []
